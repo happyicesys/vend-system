@@ -17,12 +17,4 @@ class VendingMachineTransaction extends Model
     protected $casts = [
         'original' => 'json'
     ];
-
-    protected function original(): Attribute
-    {
-        return Attribute::make(
-            get: fn ($value) => $value,
-            set: fn ($value) => $value,
-        );
-    }
 }
